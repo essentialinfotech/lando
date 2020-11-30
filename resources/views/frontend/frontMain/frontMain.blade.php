@@ -119,6 +119,23 @@
                     </div>
                 </div>
 
+                    @foreach($all_first_image as $first)
+                <div class="col-sm-12 col-md-6 col-lg 6">
+                    
+                    <div class="services-head-cont">
+                        <h2 class="text-white">{{$first->image_number}}</h2>
+                    </div>
+                    
+                    <div class="services-img2">
+                        <img src="{{asset('uploads/firstpart/image/')}}/{{$first->first_single_image}}" alt="">
+                    </div>
+                    
+                    <div class="sercics-cont ">
+                        <p class="text-white">{{$first->image_title}}</p>
+                    </div>
+                    
+
+
                 <div class="col-sm-12 col-md-6 col-lg 6">
                     <div class="services-head-cont">
                         <h2 class="text-white">we are your best</h2>
@@ -131,15 +148,50 @@
                             eos amet, illo fugiat in autem non rerum iusto culpa odit deleniti ipsa quae esse tempore,
                             distinctio consequatur quas cupiditate.</p>
                     </div>
+
                     <div class="contact-btn">
                         <button class="btn ">Contact</button>
                     </div>
                 </div>
+
+                @endforeach
+
             </div>
         </div>
     </section>
 
     <!-- ===  end services section === -->
+
+<section class="project-section" id="project">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    @foreach($all_seconds as $second)
+                        <h2 class="text-white">{{$second->first_title}}</h2>
+                        <p class="text-white">
+                            {{$second->first_paragraph}}
+                        </p>
+                    @endforeach
+                </div>
+                @foreach($all_seconds_image as $image)
+                <div class="col-lg-6 col-md-6">
+                    
+                    <div class="card card-project">
+                        <div class="card-header">
+                            <div class="float-left">
+                                <h4 class="text-white">{{$image->image_number}}</h4>
+                            </div>
+                            <div class="float-right">
+                                <h4 class="text-white">{{$image->image_title}}</h4>
+                            </div>
+                        </div>
+                        <div class="card-image">
+                            <img src="{{asset('uploads/secondpart/image')}}/{{$image->first_single_image}}" alt="" class="card-bottom-img">
+                        </div>
+                    </div>
+                     
+                </div>
+                @endforeach
 
 
 
@@ -219,9 +271,14 @@
                         </div>
                     </div>
                 </div>
+
+
             </div>
         </div>
     </section>
+
+    <!-- === project section === -->
+  
 
 
     <!-- === end project section === -->
@@ -235,12 +292,22 @@
             <div class="row">
                 <div class="col-sm-12 col-md-5 col-lg-5">
                     <div class="about-cont">
+
+                        <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis commodi
+                            excepturi dolorem. Soluta ab voluptate vero eum illum mollitia, deserunt optio magnam
+                            numquam ex neque non eaque, iusto, delectus totam.</p>
+
                         <p class="text-white">{{$slogun->description}}</p>
+
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-7 col-lg-7 d-sm-none  d-xs-none d-md-block">
                     <div class="about-head">
+
+                        <h2 class="text-white">our great team</h2>
+
                     <h2 class="text-white">{{$slogun->title}}</h2>
+
                     </div>
                 </div>
             </div>
@@ -255,6 +322,37 @@
     <section class="team-member" id="about_us">
         <div class="container">
             <div class="row">
+
+                <div class="col-sm-12 col-md-4 col-lg-4 team">
+                    <div class="team-img">
+                        <img src="resources/img/a.jpg" alt="">
+                    </div>
+                    <div class="team-des">
+                        <h3 class="text-white">Johan</h3>
+                        <p class="text-white">Graphics</p>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-4 col-lg-4 team ">
+                    <div class="team-img">
+                        <img src="resources/img/a.jpg" alt="">
+                    </div>
+                    <div class="team-des">
+                        <h3 class="text-white">Johan</h3>
+                        <p class="text-white">Graphics</p>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-4 col-lg-4 team">
+                    <div class="team-img">
+                        <img src="resources/img/a.jpg" alt="">
+                    </div>
+                    <div class="team-des">
+                        <h3 class="text-white">Johan</h3>
+                        <p class="text-white">Graphics</p>
+                    </div>
+                </div>
+
                 @foreach ($members as $member)
                 <div class="col-sm-12 col-md-4 col-lg-4 team">
                     <div class="team-img">
@@ -268,7 +366,6 @@
                 @endforeach
             
 
-               
             </div>
         </div>
     </section>
@@ -281,7 +378,11 @@
             <div class="row">
                 <div class="col-sm-12 col-md-6 col-lg-6">
                     <div class="join-head d-sm-none  d-md-block">
+
+                        <h2 class="text-white">Ready to join us?</h2>
+
                     <h2 class="text-white">{{$joins->title}}</h2>
+
                     </div>
                     <div class="about-head d-block d-md-none">
                         <h2 class="text-white">our great team</h2>
@@ -290,7 +391,13 @@
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-6">
                     <div class="join-cont">
+
+                        <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, sit ea.
+                            Dolorum explicabo, veritatis adipisci ipsum reiciendis tempore quaerat dolore repellat modi
+                            voluptatem soluta nihil, expedita cumque at, aut velit.</p>
+
                         <p class="text-white">{{$joins->description}}</p>
+
                     </div>
 
                 </div>
