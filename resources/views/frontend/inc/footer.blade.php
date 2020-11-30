@@ -5,7 +5,11 @@
                     <!-- === logo === -->
                     <div class="footer-logo d-none d-md-block">
                         <a href="#home" class="text-white">EIT</a>
+
                         <p class="text-white">all right reserved</p>
+
+                        <p class="text-white">{{$copyright->copyright}}</p>
+
                     </div>
                     <div class="social-link d-block d-md-none">
                         <a href="" class=""><i class="fa fa-facebook-f"></i></a>
@@ -18,9 +22,15 @@
                 <!-- ==== social === -->
                 <div class="col-sm-12 col-md-4 col-lg-4">
                     <div class="social-link d-none d-md-block">
+
                         <a href="" class=""><i class="fa fa-facebook-f"></i></a>
                         <a href="" class=""><i class="fa fa-twitter"></i></a>
                         <a href="" class=""><i class="fa fa-linkedin"></i></a>
+
+                    <a href="{{$socials->facebook}}" class=""><i class="fa fa-facebook-f"></i></a>
+                        <a href="{{$socials->twitter}}" class=""><i class="fa fa-twitter"></i></a>
+                        <a href="{{$socials->linkedin}}" class=""><i class="fa fa-linkedin"></i></a>
+
                     </div>
 
                     <!-- ===small devices === -->
@@ -40,6 +50,7 @@
                 <div class="col-sm-12 col-md-4 col-lg-4 ">
                     <div class="footer-menu d-none d-md-block">
                         <div class="float-left d-none d-md-block ">
+
                             <a href="#home" class="text-white">Home</a>
                             <a href="#services" class="text-white">Services</a>
                         </div>
@@ -51,6 +62,18 @@
                     <div class="footer-logo d-block d-md-none">
                         <a href="#home" class="text-white">EIT</a>
                         <p class="text-white">all right reserved</p>
+
+                            @foreach ($menus as $menu)
+                        <a href="" class="text-white">{{$menu->name}}</a>
+                            @endforeach
+                            
+                        </div>
+                      
+                    </div>
+                    <div class="footer-logo d-block d-md-none">
+                        <a href="#home" class="text-white">EIT</a>
+                    <p class="text-white">{{$copyright->copyright}}</p>
+
                     </div>
                 </div>
             </div>
